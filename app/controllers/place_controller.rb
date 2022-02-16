@@ -4,12 +4,12 @@ class PlaceController < ApplicationController
         @places = Place.all
       end
     
+      def new
+        @place_path = Place.new
+      end
+
       def show
         @place = Place.find(params["id"])
-      end
-    
-      def new
-        @place = Place.new
       end
     
       def create
@@ -36,5 +36,3 @@ class PlaceController < ApplicationController
     
     end
     
-
-end
